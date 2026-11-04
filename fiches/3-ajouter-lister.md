@@ -1,4 +1,4 @@
-# 3. Le menu, ajouter et lister
+ # 3. Le menu, ajouter et lister
 
 **Vos fichiers :** `src/registre.js`, puis `app.js` (le menu, choix 1 et 2) · **Vos tests :** `npm run test:registre` (13 tests fournis)
 
@@ -20,7 +20,7 @@ Codez les fonctions dans l'ordre : chacune sert aux suivantes. Les tests fournis
 4. `0` quitte en affichant `Au revoir !` ; le programme quitte aussi si `demander` renvoie `null` (Ctrl+C).
 5. Un autre choix affiche `Choix inconnu : « 9 ». Tapez un chiffre du menu.`, puis le menu revient.
 6. Aucune erreur n'arrête le programme : affichez `À compléter : …` (le message de l'erreur) si elle vient d'une fonction pas encore codée (message commençant par `TODO`), sinon `Erreur inattendue : …`, puis le menu revient.
-
+ 
 ```text
 ==================================================
    JOURNAL MÉTÉOROLOGIQUE DE LA FERME
