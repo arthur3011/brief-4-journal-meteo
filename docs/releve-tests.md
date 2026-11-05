@@ -13,11 +13,12 @@ Nombre de journées avec au moins 10 mm de pluie = 2       : "M03" (12 mm), "M08
 
 | Action | Attendu | Obtenu | Testeur |
 | --- | --- | --- | --- |
-| ✏️ | | | |
-| ✏️ | | | |
-| ✏️ | | | |
-| ✏️ | | | |
-| ✏️ | | | |
-| ✏️ | | | |
+| Ajouter un relevé valide | Ajout et sauvegarde du relevé dans releve.json | relevé effectivement ajouté | Moi |
+| Rechercher une date inexistante | message indique qu'aucun relevé n'a été trouvé | Relevé du 2026-36-12 introuvable | Moi  |
+| Ajouter un relevé avec une température invalide | Température invalide | Température invalide | Moi |
+| Trie par température croissante | Relevés affichés dans l'ordre demandé | Tri effectué correctement | Moi |
+| Trie par humidité croissante | Relevés affichés dans l'ordre demandé | Tri effectué correctement | Moi  |
+| Consulter la synthèse | Affichage correcte des statistiques | Synthèse affichée | Moi |
+|Saisir un choix inconnu | Un message indique que le choix est invalide | Choix inconnu : « 7 ». Tapez un chiffre du menu | Moi |
 
 **Sur un autre poste** (`git clone`, `node app.js`, `npm test`, en suivant le README) : ✏️
