@@ -7,18 +7,9 @@
 export function moyenneTemperature(releves) {
   if (releves.length === 0) {
     return null;
-<<<<<<< HEAD
-  }
-
-  const somme = releves.reduce(
-    (total, releve) => total + releve.temperatureC,
-    0
-  );
-=======
 }
   const somme = releves.reduce(
     (total, releve) => total + releve.temperatureC,0);
->>>>>>> 28b827cccfa0da6ddbcdb38922e01ad83f21aabc
 
   const moyenne = somme / releves.length;
 
@@ -28,12 +19,7 @@ export function moyenneTemperature(releves) {
 // Renvoie le cumul (la somme) des pluies, en mm. Liste vide : 0.
 export function cumulPluie(releves) {
   return releves.reduce(
-<<<<<<< HEAD
-    (total, releve) => total + releve.pluieMm,
-    0
-=======
     (total, releve) => total + releve.pluieMm, 0
->>>>>>> 28b827cccfa0da6ddbcdb38922e01ad83f21aabc
   );
 }
 

@@ -7,13 +7,8 @@ import { estDateValide, versNombre } from './outils.js';
 //            'M11 | 2026-10-25 | 27.5 °C | 4 mm | air 79 %' (JavaScript affiche un point décimal,
 //            même si la virgule est acceptée à la saisie)
 export function formaterReleve(releve) {
-<<<<<<< HEAD
-  return `${releve.id} | ${releve.date} | ${releve.temperatureC} °C | ${releve.pluieMm} mm | air ${releve.humiditeAirPct} %`
-};
-=======
   return `${releve.id} | ${releve.date} | ${releve.temperatureC} °C | ${releve.pluieMm} mm | air ${releve.humiditeAirPct} %`;
 }
->>>>>>> 28b827cccfa0da6ddbcdb38922e01ad83f21aabc
 
 // Renvoie un texte avec un relevé par ligne (lignes séparées par '\n'),
 // ou 'Aucun relevé enregistré.' si la liste est vide.
@@ -68,15 +63,9 @@ export function creerReleve(saisie) {
   return {
     id : saisie.id,
     date : saisie.date,
-<<<<<<< HEAD
-    temperatureC : Number(saisie.temperatureC.replace("," , ".")),
-    pluieMm: Number(saisie.pluieMm.replace(",", ".")),
-    humiditeAirPct: Number(saisie.humiditeAirPct.replace(",", "."))
-=======
     temperatureC : versNombre(saisie.temperatureC),
     pluieMm: versNombre(saisie.pluieMm),
     humiditeAirPct: versNombre(saisie.humiditeAirPct)
->>>>>>> 28b827cccfa0da6ddbcdb38922e01ad83f21aabc
   }
 }
 
@@ -87,11 +76,7 @@ export function ajouterReleve(releves, saisie) {
   if (erreurs.length > 0) {
     return erreurs ;
   }
-<<<<<<< HEAD
-  const nouveauReleve = creerReleve (saisie);
-=======
   const nouveauReleve = creerReleve(saisie);
->>>>>>> 28b827cccfa0da6ddbcdb38922e01ad83f21aabc
   releves.push (nouveauReleve);
   return [];
 }

@@ -106,14 +106,14 @@ async function main() {
 
   break;
 }
-           break;
+
           case '2':
             {
   console.log(`--- Liste des relevés (${releves.length}) ---`);
   console.log(listerReleves(releves));
   break;
 }
-           break;
+
           case '3':
             {
   console.log("--- Rechercher ---");
@@ -172,7 +172,7 @@ async function main() {
     console.log("Choix inconnu : retour au menu.");
   }
             break;
- }
+  }
           case '4':
             {
   console.log("--- Trier ---");
@@ -213,13 +213,9 @@ async function main() {
 
     console.log(`Nombre de relevés : ${releves.length}`);
     console.log(`Température moyenne : ${moyenne} °C`);
-    console.log(
-      `Température min / max : ${extremes.min} / ${extremes.max} °C`
-    );
+    console.log(`Température min / max : ${extremes.min} / ${extremes.max} °C`);
     console.log(`Cumul de pluie : ${cumul} mm`);
-    console.log(
-      `${pluvieux.length} journée(s) avec au moins ${SEUIL_JOUR_PLUVIEUX} mm de pluie`
-    );
+    console.log(`${pluvieux.length} journée(s) avec au moins ${SEUIL_JOUR_PLUVIEUX} mm de pluie`);
   }
 
   console.log(`Seuil de journée pluvieuse : ${SEUIL_JOUR_PLUVIEUX} mm`);
