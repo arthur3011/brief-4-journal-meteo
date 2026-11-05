@@ -196,7 +196,37 @@ async function main() {
            break;
   }
           case '5':
+            {
+  console.log("--- Synthèse de la série ---");
+
+  if (releves.length === 0) {
+    console.log("Nombre de relevés : 0");
+    console.log("Température moyenne : aucune donnée");
+    console.log("Température min / max : aucune donnée");
+    console.log("Cumul de pluie : 0 mm");
+    console.log("Journées pluvieuses : 0");
+  } else {
+    const moyenne = moyenneTemperature(releves);
+    const extremes = temperatureMinMax(releves);
+    const cumul = cumulPluie(releves);
+    const pluvieux = joursPluvieux(releves, SEUIL_JOUR_PLUVIEUX);
+
+    console.log(`Nombre de relevés : ${releves.length}`);
+    console.log(`Température moyenne : ${moyenne} °C`);
+    console.log(
+      `Température min / max : ${extremes.min} / ${extremes.max} °C`
+    );
+    console.log(`Cumul de pluie : ${cumul} mm`);
+    console.log(
+      `${pluvieux.length} journée(s) avec au moins ${SEUIL_JOUR_PLUVIEUX} mm de pluie`
+    );
+  }
+
+  console.log(`Seuil de journée pluvieuse : ${SEUIL_JOUR_PLUVIEUX} mm`);
+  console.log("Les statistiques décrivent les relevés enregistrés.");
+  console.log("Elles ne constituent pas des prévisions météorologiques.");
            break;
+}
           case '0':
             console.log("Au revoir !");
             break;          
