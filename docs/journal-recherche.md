@@ -7,10 +7,3 @@
 | async / await | ChatGpt | Permettent d'attendre la réponse avant de continuer | saisie.js |
 | Fonction versNombre(texte) | ChatGpt |Transforme un texte en nombre, en acceptant les formats courants de saisie | outils.js |
 | JSON.parse | ChatGpt | convertir un texte au format JSON en une valeur JavaScript utilisable | stockage.test.js |
-| utf-8  | https://developer.mozilla.org/fr/docs/Glossary/UTF-8  | Parametre d'encodage | stockage.js |
-| JSON.stringify | ChatGpt | Se lance toujours avec parametre, filtre et indentation | stockage.js |
-| map() | ChatGpt | un tableau et à transformer chaque élément pour créer un nouveau tableau | registre.js |
-|  |  |  | |
-|  |  |  | |
-|  |  |  | |
-|  |  |  | |
