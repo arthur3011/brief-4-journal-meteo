@@ -115,10 +115,86 @@ async function main() {
 }
            break;
           case '3':
-            break;
+            {
+  console.log("--- Rechercher ---");
+  console.log("1. Par identifiant");
+  console.log("2. Par date");
+  console.log("3. Journées pluvieuses");
 
+  const recherche = await demander("Votre choix : ");
+
+  if (recherche === null) {
+    choix = null;
+    break;
+  }
+
+  if (recherche === '1') {
+    const id = await demander("Identifiant : ");
+
+    if (id === null) {
+      choix = null;
+      break;
+    }
+
+    const releve = trouverParId(releves, id.trim().toUpperCase());
+
+    if (releve) {
+      console.log(formaterReleve(releve));
+    } else {
+      console.log(`Relevé ${id.trim().toUpperCase()} introuvable.`);
+    }
+
+  } else if (recherche === '2') {
+    const date = await demander("Date (AAAA-MM-JJ) : ");
+
+    if (date === null) {
+      choix = null;
+      break;
+    }
+
+    const releve = trouverParDate(releves, date);
+
+    if (releve) {
+      console.log(formaterReleve(releve));
+    } else {
+      console.log(`Relevé du ${date} introuvable.`);
+    }
+
+  } else if (recherche === '3') {
+    const resultat = joursPluvieux(releves, SEUIL_JOUR_PLUVIEUX);
+
+    console.log(
+      `${resultat.length} journée(s) avec au moins ${SEUIL_JOUR_PLUVIEUX} mm de pluie :`
+    );
+    console.log(listerReleves(resultat));
+
+  } else {
+    console.log("Choix inconnu : retour au menu.");
+  }
+            break;
+ }
           case '4':
+            {
+  console.log("--- Trier ---");
+  console.log("1. Par température croissante");
+  console.log("2. Par pluie croissante");
+
+  const tri = await demander("Votre choix : ");
+
+  if (tri === null) {
+    choix = null;
+    break;
+  }
+
+  if (tri === '1') {
+    console.log(listerReleves(trierParTemperature(releves)));
+  } else if (tri === '2') {
+    console.log(listerReleves(trierParPluie(releves)));
+  } else {
+    console.log("Choix inconnu : retour au menu.");
+  }
            break;
+  }
           case '5':
            break;
           case '0':
