@@ -49,8 +49,70 @@ async function main() {
       try {
         switch (choix) {
           case '1':
+              {
+  console.log("--- Ajouter un relevé ---");
+
+  const id = await demander("Identifiant : ");
+  if (id === null) {
+    choix = null;
+    break;
+  }
+
+  const date = await demander("Date (AAAA-MM-JJ) : ");
+  if (date === null) {
+    choix = null;
+    break;
+  }
+
+  const temperatureC = await demander("Température (°C) : ");
+  if (temperatureC === null) {
+    choix = null;
+    break;
+  }
+
+  const pluieMm = await demander("Pluie (mm) : ");
+  if (pluieMm === null) {
+    choix = null;
+    break;
+  }
+
+  const humiditeAirPct = await demander("Humidité de l'air (%) : ");
+  if (humiditeAirPct === null) {
+    choix = null;
+    break;
+  }
+
+  const saisie = {
+    id: id.trim().toUpperCase(),
+    date,
+    temperatureC,
+    pluieMm,
+    humiditeAirPct
+  };
+
+  const erreurs = ajouterReleve(releves, saisie);
+
+  if (erreurs.length > 0) {
+    console.log("Relevé refusé :");
+    erreurs.forEach(erreur => console.log(`- ${erreur}`));
+    console.log(`Le journal compte toujours ${releves.length} relevé(s).`);
+  } else {
+    await enregistrerJson(FICHIER_DONNEES, releves);
+
+    console.log(
+      `Relevé ${saisie.id} ajouté. Le journal compte ${releves.length} relevé(s).`
+    );
+  }
+
+  break;
+}
            break;
           case '2':
+            {
+  console.log(`--- Liste des relevés (${releves.length}) ---`);
+  console.log(listerReleves(releves));
+  break;
+}
            break;
           case '3':
             break;
