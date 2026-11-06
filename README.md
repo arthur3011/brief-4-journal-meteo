@@ -29,8 +29,8 @@ Sous PowerShell, si `npm` est bloqué : `npm.cmd test`.
 - [x] Rechercher par identifiant ou par date ; journées pluvieuses (au moins 10 mm)
 - [x] Trier par température ou par pluie
 - [x] Synthèse : température moyenne, minimale et maximale de la série, cumul de pluie, journées pluvieuses
-- [ ] Bonus : supprimer et modifier un relevé (choix 6 et 7)
-- [ ] Bonus : tri par température décroissante, journée la plus chaude
+- [x] Bonus : supprimer et modifier un relevé (choix 6 et 7)
+- [x] Bonus : tri par température décroissante, journée la plus chaude
 
 ## Données
 
@@ -47,4 +47,4 @@ Les données sont fictives et ne représentent pas des observations météorolog
 ## Auteur
 
 Irié Bi Botty Fiacre Arthur, arthur3011. 
-Entraide : Koné Pagadjoufougou Abdoulaye (Explications sur le menu app.js), KOUAME K Florent (Explications sur les comparateurs numériques et la copie de relevées dans recherche.js), Anoh Levi (Explications sur le menu et les choix dans app.js), Fakayode Abdul (Explications sur les regles d'erreur dans registre.js)
+Entraide : Koné Pagadjoufougou Abdoulaye (Explications sur le menu app.js), KOUAME K Florent (Explications sur les comparateurs numériques et la copie de relevées dans recherche.js), Anoh Levi (Explications sur le menu et les choix dans app.js), Fakayode Abdul (Explications sur les regles d'erreur dans registre.js), 
